@@ -19,12 +19,13 @@ urlpatterns = [
         r'^login/$',
         auth_views.login,
         {'template_name': 'user/login.html', 'authentication_form': LoginForm},
+        # {'template_name': 'user/login.html'},
         name='login'
     ),
     url(
         r'^logout/$',
         auth_views.logout,
-        {'template_name': 'user/logout.html'},
+        {'template_name': 'user/index.html'},
         name='logout'
     ),
 ]
